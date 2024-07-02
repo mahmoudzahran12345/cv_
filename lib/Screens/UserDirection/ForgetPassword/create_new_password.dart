@@ -34,6 +34,7 @@ class CreateNewPassword extends StatelessWidget {
             {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text(' حدث خطا ما ${state.error}'),
+                
                 backgroundColor: Colors.red,
               ));
             }
