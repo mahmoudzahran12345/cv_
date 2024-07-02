@@ -8,7 +8,7 @@ import '../../CV/build_options_page.dart';
 import '../../CompanyDirection/Profile/Notification/notifiction_company.dart';
 import '../../CompanyDirection/Profile/Security/security_company.dart';
 import '../Dashboard/views/dashboard_view.dart';
-import '../HomePage/home_page.dart';
+import '../HomePage/home_landing/home_page.dart';
 import '../LoginView/login_user.dart';
 import 'MyAccount/my_account.dart';
 import 'Terms&Conditions/terms_conditions.dart';
@@ -85,71 +85,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          index: 3,
-          backgroundColor: const Color(0xFF139487).withOpacity(0.5),
-          color: const Color(0xFF139487),
-          animationDuration: const Duration(milliseconds: 300),
-          items: [
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const BuildOptionsPage(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.switch_account_outlined,
-                  size: 30, color: Colors.white),
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const DashBoradView(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.dashboard, size: 30, color: Colors.white),
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const HomePage(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.home, size: 30, color: Colors.white),
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const ProfileScreen(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.account_circle,
-                  size: 30, color: Colors.white),
-            ),
-          ]),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(

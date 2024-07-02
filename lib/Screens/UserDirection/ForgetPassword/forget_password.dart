@@ -24,10 +24,7 @@ class ForgetPassword extends StatelessWidget {
                 builder: (context) => Sizer(
                   builder: (context, orientation,
                           deviceType) =>
-                       const VerficationEmail(
-
-                      ),
-                ),
+                       const VerficationEmail(),),
               ),
             );
           }

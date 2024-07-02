@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../HomePage/home_page.dart';
+import '../HomePage/home_landing/home_page.dart';
 import '../user_direction.dart';
 
 

@@ -68,6 +68,8 @@ dependencies:
   get: ^4.6.6
   animated_splash_screen: ^1.3.0
   dio: ^5.4.3+1
+  pin_code_fields:
+
 flutter_icons:
   android: true
   ios: true

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../CV/build_options_page.dart';
-import '../../HomePage/home_page.dart';
+import '../../HomePage/home_landing/home_page.dart';
 import '../../Profile/profile_screen.dart';
 import '../utils/size_config.dart';
 import '../widgets/adaptive_layout_widget.dart';
@@ -84,71 +84,6 @@ class _DashBoradViewState extends State<DashBoradView> {
           ),
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          index: 1,
-          backgroundColor: const Color(0xFF139487).withOpacity(0.5),
-          color: const Color(0xFF139487),
-          animationDuration: const Duration(milliseconds: 300),
-          items: [
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const BuildOptionsPage(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.switch_account_outlined,
-                  size: 30, color: Colors.white),
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const DashBoradView(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.dashboard, size: 30, color: Colors.white),
-            ),
-            IconButton(
-              icon: const Icon(Icons.home, size: 30, color: Colors.white),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const HomePage(),
-                    ),
-                  ),
-                );
-              },
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const ProfileScreen(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.account_circle,
-                  size: 30, color: Colors.white),
-            ),
-          ]),
       key: scaffoldKey,
       backgroundColor: const Color(0xFFF7F9FA),
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet

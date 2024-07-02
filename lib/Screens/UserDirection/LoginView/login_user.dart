@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:create_cv/Screens/UserDirection/HomePage/home_landing/home_landing.dart';
 import 'package:create_cv/Screens/UserDirection/LoginView/cubit_login/login_Cubit.dart';
 import 'package:create_cv/Screens/UserDirection/LoginView/cubit_login/login_state.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../ForgetPassword/forget_password.dart';
-import '../HomePage/home_page.dart';
+import '../HomePage/home_landing/home_page.dart';
 import '../SignUpView/sign_up_user.dart';
 import '../user_direction.dart';
 
@@ -28,7 +29,7 @@ class LoginUSerPage extends StatelessWidget {
                 builder: (context) => Sizer(
                   builder: (context, orientation,
                       deviceType) =>
-                  const HomePage(),
+                  const HomeLanding(),
                 ),
               ),
             );

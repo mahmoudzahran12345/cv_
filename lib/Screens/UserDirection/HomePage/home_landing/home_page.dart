@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../CV/build_options_page.dart';
-import '../../CompanyDirection/HomePageCompany/Top Jobs/top_job_list_view.dart';
-import '../../CompanyDirection/HomePageCompany/search.dart';
-import '../../CompanyDirection/HomePageCompany/show_all_top_job.dart';
-import '../Dashboard/views/dashboard_view.dart';
-import '../Profile/profile_screen.dart';
-import 'Companies/show_all_companies.dart';
-import 'My Resumes/show_all_my_resume.dart';
+import '../../../CV/build_options_page.dart';
+import '../../../CompanyDirection/HomePageCompany/Top Jobs/top_job_list_view.dart';
+import '../../../CompanyDirection/HomePageCompany/search.dart';
+import '../../../CompanyDirection/HomePageCompany/show_all_top_job.dart';
+import '../../Dashboard/views/dashboard_view.dart';
+import '../../Profile/profile_screen.dart';
+import '../Companies/show_all_companies.dart';
+import '../My Resumes/show_all_my_resume.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -84,58 +84,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          index: 2,
-          backgroundColor: const Color(0xFF139487).withOpacity(0.5),
-          color: const Color(0xFF139487),
-          animationDuration: const Duration(milliseconds: 300),
-          items: [
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const BuildOptionsPage(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.switch_account_outlined,
-                  size: 30, color: Colors.white),
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const DashBoradView(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.dashboard, size: 30, color: Colors.white),
-            ),
-            const Icon(Icons.home, size: 30, color: Colors.white),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Sizer(
-                      builder: (context, orientation, deviceType) =>
-                          const ProfileScreen(),
-                    ),
-                  ),
-                );
-              },
-              child: const Icon(Icons.account_circle,
-                  size: 30, color: Colors.white),
-            ),
-          ]),
+
       body: Column(
         children: [
           const SizedBox(height: 5),
