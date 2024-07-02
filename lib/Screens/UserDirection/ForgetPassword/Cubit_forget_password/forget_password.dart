@@ -43,7 +43,7 @@ class ChangePasswordCubit extends Cubit<ChangePassWordState> {
       EndPoint.resetPassword,
       data: {
         "email": email.text.trim(),
-        "OTP": "123456",
+        "OTP": OTP.text.trim(),
         "newPassWord": newPassword.text.trim(),
         "oldPassWord": confirmPassword.text.trim(),
       },

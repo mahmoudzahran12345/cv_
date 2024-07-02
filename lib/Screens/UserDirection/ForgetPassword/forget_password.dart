@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:create_cv/Screens/UserDirection/ForgetPassword/Cubit_forget_password/forget_password.dart';
 import 'package:create_cv/Screens/UserDirection/ForgetPassword/Cubit_forget_password/forget_password_state.dart';
+import 'package:create_cv/Screens/UserDirection/ForgetPassword/create_new_password.dart';
 import 'package:create_cv/Screens/UserDirection/ForgetPassword/verfication_email.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,13 +24,22 @@ class ForgetPassword extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => Sizer(
                   builder: (context, orientation,
-                          deviceType) =>
-                       const VerficationEmail(
-
-                      ),
+                      deviceType) =>
+                  const CreateNewPassword(),
                 ),
               ),
             );
+            // Navigator.pushReplacement(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => Sizer(
+            //       builder: (context, orientation,
+            //               deviceType) =>
+            //            const VerficationEmail(
+            //           ),
+            //     ),
+            //   ),
+            // );
           }
         },
         builder: (context,state){
@@ -152,6 +162,10 @@ class ForgetPassword extends StatelessWidget {
                                       delay: const Duration(milliseconds: 600),
                                       duration: const Duration(milliseconds: 700),
                                       child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Email',
+                                          border: OutlineInputBorder(),
+                                        ),
                                         controller: ChangePasswordCubit.get(context).email,
                                       ),),
                                   ],
